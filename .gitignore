@@ -1,20 +1,6 @@
-# Python
 __pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-venv/
-.venv/
-ENV/
-
-# Jupyter Notebook checkpoints
-.ipynb_checkpoints
-
-# OS / Editor files
+*.pyc
+.env
 .DS_Store
 Thumbs.db
-.vscode/
-.idea/
-*.swp
+~$*

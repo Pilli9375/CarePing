@@ -1,24 +1,102 @@
 {
-  "project": "CarePing \u2014 Health: The Forgotten Patient",
+  "project": "CarePing OS v2.0 \u2014 Health: The Forgotten Patient",
   "team": "AAdharsha Kutumbam",
   "members": [
     "Naga Adithya V (23BCE9062)",
     "Harsha Vardhan Vurtha (23BCE9129)"
   ],
-  "model_type": "Multivariate Ordinary Least Squares (OLS) Queue Estimator & Walkout Risk Scorer",
-  "split_protocol": "80% Train (6,400 encounters) / 20% Test (1,600 encounters), random_seed=42",
-  "metrics": {
-    "baseline_test_mae_min": 20.27,
-    "baseline_test_rmse_min": 25.0,
-    "train_r2": 0.5166,
-    "test_r2": 0.5236,
-    "full_r2": 0.5184,
-    "train_mae_min": 13.92,
-    "test_mae_min": 13.77,
-    "full_mae_min": 13.89,
-    "train_rmse_min": 17.36,
-    "test_rmse_min": 17.26,
-    "mae_improvement_over_baseline_pct": 32.07
+  "model_declaration": "TRAINED FROM SCRATCH (Pure NumPy/SciPy SVD OLS, L2 Ridge, Empirical Bayes Boosted Interactions & Newton-IRLS Logistic Hazard)",
+  "external_apis_used": "NONE (100% self-contained local computation, zero API keys)",
+  "computational_efficiency": {
+    "total_pipeline_runtime_ms": 2706.91,
+    "data_ingest_and_join_ms": 207.92,
+    "ols_training_time_ms": 7.923,
+    "ridge_training_time_ms": 0.659,
+    "boosted_training_time_ms": 399.253,
+    "walkout_irls_training_time_ms": 5.83,
+    "inference_latency_microseconds_per_patient": 0.032
+  },
+  "forensic_data_audit": {
+    "pipeline_execution_ms": 207.92,
+    "total_records_processed": 15012,
+    "none_string_trap_patients_preserved": 747,
+    "tests_inside_encounter_window": 2,
+    "tests_before_arrival": 2481,
+    "tests_after_discharge": 2517,
+    "out_of_window_test_pct": 99.96,
+    "lwbs_ghost_service_records_sanitized": 242,
+    "pediatric_adult_routing_anomalies": 533,
+    "unseen_registered_patients_count": 45
+  },
+  "benchmark_80_20_split": {
+    "baseline_mean_predictor": {
+      "r2": -0.0001,
+      "mae_min": 20.27,
+      "rmse_min": 25.0,
+      "within_15m_accuracy_pct": 45.0
+    },
+    "scratch_ols_closed_form": {
+      "r2": 0.5236,
+      "mae_min": 13.77,
+      "rmse_min": 17.26,
+      "within_15m_accuracy_pct": 61.56
+    },
+    "scratch_ridge_l2": {
+      "r2": 0.5236,
+      "mae_min": 13.77,
+      "rmse_min": 17.26,
+      "within_15m_accuracy_pct": 61.38
+    },
+    "scratch_boosted_interaction": {
+      "r2": 0.5221,
+      "mae_min": 13.8,
+      "rmse_min": 17.28,
+      "within_15m_accuracy_pct": 61.69
+    },
+    "mae_reduction_over_baseline_pct": 32.07
+  },
+  "five_fold_cross_validation": {
+    "Naive_Hospital_Baseline": {
+      "cv_mean_r2": -0.0013,
+      "cv_std_r2": 0.0014,
+      "cv_mean_mae_min": 20.31,
+      "cv_mean_rmse_min": 24.99,
+      "cv_within_15m_pct": 44.82
+    },
+    "Scratch_OLS_ClosedForm": {
+      "cv_mean_r2": 0.516,
+      "cv_std_r2": 0.0097,
+      "cv_mean_mae_min": 13.92,
+      "cv_mean_rmse_min": 17.38,
+      "cv_within_15m_pct": 60.84
+    },
+    "Scratch_Ridge_L2": {
+      "cv_mean_r2": 0.516,
+      "cv_std_r2": 0.0097,
+      "cv_mean_mae_min": 13.92,
+      "cv_mean_rmse_min": 17.38,
+      "cv_within_15m_pct": 60.8
+    },
+    "Scratch_Boosted_Interaction": {
+      "cv_mean_r2": 0.5125,
+      "cv_std_r2": 0.0112,
+      "cv_mean_mae_min": 13.98,
+      "cv_mean_rmse_min": 17.44,
+      "cv_within_15m_pct": 60.74
+    }
+  },
+  "priority_aging_simulation": {
+    "policy_wait_cap_min": 45.0,
+    "policy_boarding_cut_pct": 50,
+    "baseline_mean_wait_min": 51.99,
+    "simulated_mean_wait_min": 43.33,
+    "baseline_low_triage_wait_min": 71.69,
+    "simulated_low_triage_wait_min": 55.8,
+    "baseline_p90_wait_min": 84.0,
+    "simulated_p90_wait_min": 61.58,
+    "baseline_walkouts": 242,
+    "projected_walkouts_prevented": 51,
+    "annual_bed_hours_reclaimed": 3482
   },
   "anova_variance_decomposition": [
     {
@@ -71,9 +149,9 @@
       "significant": false
     }
   ],
-  "learned_coefficients": [
+  "learned_ols_coefficients": [
     {
-      "Feature": "Intercept (Baseline: Critical Triage, Cardiology D04)",
+      "Feature": "Intercept (Critical Triage, Cardiology D04)",
       "Weight_Minutes": 8.7957,
       "Std_Error": 1.1458,
       "t_Statistic": 7.6764,
@@ -105,7 +183,7 @@
       "Weight_Minutes": 1.1014,
       "Std_Error": 0.9402,
       "t_Statistic": 1.1715,
-      "p_Value": 0.24142504393032604
+      "p_Value": 0.24142504393032693
     },
     {
       "Feature": "Department == Emergency",
@@ -161,7 +239,7 @@
       "Weight_Minutes": 1.021,
       "Std_Error": 0.9451,
       "t_Statistic": 1.0803,
-      "p_Value": 0.28002936443013793
+      "p_Value": 0.28002936443013837
     },
     {
       "Feature": "Department == Radiology",
@@ -178,18 +256,18 @@
       "p_Value": 2.7982718986407917e-07
     },
     {
-      "Feature": "Patient_Age (Standardized)",
+      "Feature": "Patient_Age (Z-Score)",
       "Weight_Minutes": -0.0139,
       "Std_Error": 0.1942,
       "t_Statistic": -0.0715,
       "p_Value": 0.9429785885021664
     },
     {
-      "Feature": "Arrival_Hour (Standardized)",
+      "Feature": "Arrival_Hour (Z-Score)",
       "Weight_Minutes": -0.0884,
       "Std_Error": 0.1943,
       "t_Statistic": -0.4549,
-      "p_Value": 0.6491789272030444
+      "p_Value": 0.6491789272030442
     }
   ]
 }

@@ -1,9 +1,9 @@
 Feature,Weight_Minutes,Std_Error,t_Statistic,p_Value
-"Intercept (Baseline: Critical Triage, Cardiology D04)",8.7957,1.1458,7.6764,1.84297022087776e-14
+"Intercept (Critical Triage, Cardiology D04)",8.7957,1.1458,7.6764,1.84297022087776e-14
 Triage_Level == High,10.7876,1.0562,10.2133,0.0
 Triage_Level == Medium,32.1457,0.9814,32.755,0.0
 Triage_Level == Low,54.99,0.9936,55.3451,0.0
-Department == Admissions,1.1014,0.9402,1.1715,0.24142504393032604
+Department == Admissions,1.1014,0.9402,1.1715,0.24142504393032693
 Department == Emergency,4.1324,0.9381,4.4048,1.0723921321842411e-05
 Department == General Medicine,10.2998,0.9522,10.8173,0.0
 Department == Laboratory,15.4129,0.9548,16.1428,0.0
@@ -11,8 +11,8 @@ Department == Neurology,11.4363,0.9531,11.9992,0.0
 Department == Orthopedics,6.0075,0.9663,6.217,5.321674212410699e-10
 Department == Outpatient,14.2153,0.9665,14.7087,0.0
 Department == Pediatrics,16.4801,0.9555,17.2475,0.0
-Department == Pharmacy,1.021,0.9451,1.0803,0.28002936443013793
+Department == Pharmacy,1.021,0.9451,1.0803,0.28002936443013837
 Department == Radiology,10.356,0.9555,10.8384,0.0
 Department == Surgery,4.877,0.9486,5.141,2.7982718986407917e-07
-Patient_Age (Standardized),-0.0139,0.1942,-0.0715,0.9429785885021664
-Arrival_Hour (Standardized),-0.0884,0.1943,-0.4549,0.6491789272030444
+Patient_Age (Z-Score),-0.0139,0.1942,-0.0715,0.9429785885021664
+Arrival_Hour (Z-Score),-0.0884,0.1943,-0.4549,0.6491789272030442
