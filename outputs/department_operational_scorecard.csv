@@ -1,0 +1,13 @@
+department_id,department_name,service_type,staff_count,bed_count,daily_capacity,encounters,mean_wait_min,median_wait_min,p90_wait_min,mean_service_min,mean_post_service_min,mean_total_los_min,walkout_lwbs_count,walkout_lwbs_rate_pct
+D01,Emergency,Emergency,28,29,431,709,48.67,48.0,79.0,45.69,51.83,146.19,26,3.67
+D02,General Medicine,Clinical,30,48,298,666,55.2,55.0,86.0,50.16,52.19,157.55,16,2.4
+D03,Pediatrics,Clinical,16,11,368,657,60.78,62.0,92.0,47.35,52.55,160.67,24,3.65
+D04,Cardiology,Clinical,25,22,394,663,44.8,45.0,76.8,47.1,53.12,145.02,19,2.87
+D05,Orthopedics,Clinical,9,48,243,629,49.41,50.0,79.2,46.52,52.57,148.5,13,2.07
+D06,Radiology,Diagnostics,7,54,153,658,54.82,56.0,86.0,47.62,53.8,156.24,15,2.28
+D07,Laboratory,Diagnostics,27,55,156,659,60.64,62.0,93.0,46.88,51.2,158.72,20,3.03
+D08,Pharmacy,Support,20,26,445,687,44.61,45.0,74.0,48.94,52.04,145.6,20,2.91
+D09,Surgery,Clinical,5,17,181,677,47.74,48.0,79.0,50.18,51.66,149.58,21,3.1
+D10,Neurology,Clinical,12,25,216,664,56.08,56.0,88.0,46.86,52.53,155.48,20,3.01
+D11,Outpatient,Outpatient,16,48,215,629,57.82,57.0,90.4,47.25,49.95,155.02,30,4.77
+D12,Admissions,Admin,5,50,438,702,44.65,45.0,76.0,48.08,53.19,145.92,18,2.56

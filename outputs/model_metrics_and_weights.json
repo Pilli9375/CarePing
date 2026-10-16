@@ -1,0 +1,195 @@
+{
+  "project": "CarePing \u2014 Health: The Forgotten Patient",
+  "team": "AAdharsha Kutumbam",
+  "members": [
+    "Naga Adithya V (23BCE9062)",
+    "Harsha Vardhan Vurtha (23BCE9129)"
+  ],
+  "model_type": "Multivariate Ordinary Least Squares (OLS) Queue Estimator & Walkout Risk Scorer",
+  "split_protocol": "80% Train (6,400 encounters) / 20% Test (1,600 encounters), random_seed=42",
+  "metrics": {
+    "baseline_test_mae_min": 20.27,
+    "baseline_test_rmse_min": 25.0,
+    "train_r2": 0.5166,
+    "test_r2": 0.5236,
+    "full_r2": 0.5184,
+    "train_mae_min": 13.92,
+    "test_mae_min": 13.77,
+    "full_mae_min": 13.89,
+    "train_rmse_min": 17.36,
+    "test_rmse_min": 17.26,
+    "mae_improvement_over_baseline_pct": 32.07
+  },
+  "anova_variance_decomposition": [
+    {
+      "factor": "triage_level",
+      "f_statistic": 2344.8272,
+      "p_value": 0.0,
+      "eta_squared_pct": 46.8014,
+      "significant": true
+    },
+    {
+      "factor": "department_name",
+      "f_statistic": 42.8779,
+      "p_value": 2.2182331193301612e-91,
+      "eta_squared_pct": 5.5754,
+      "significant": true
+    },
+    {
+      "factor": "home_area",
+      "f_statistic": 1.1312,
+      "p_value": 0.3105774868819808,
+      "eta_squared_pct": 0.2686,
+      "significant": false
+    },
+    {
+      "factor": "visit_type",
+      "f_statistic": 0.9048,
+      "p_value": 0.4378501173801925,
+      "eta_squared_pct": 0.0339,
+      "significant": false
+    },
+    {
+      "factor": "insurance_type",
+      "f_statistic": 0.5358,
+      "p_value": 0.6577355363211327,
+      "eta_squared_pct": 0.0201,
+      "significant": false
+    },
+    {
+      "factor": "chronic_condition",
+      "f_statistic": 0.1914,
+      "p_value": 0.9659614637095857,
+      "eta_squared_pct": 0.012,
+      "significant": false
+    },
+    {
+      "factor": "sex",
+      "f_statistic": 0.1738,
+      "p_value": 0.9141561720299716,
+      "eta_squared_pct": 0.0065,
+      "significant": false
+    }
+  ],
+  "learned_coefficients": [
+    {
+      "Feature": "Intercept (Baseline: Critical Triage, Cardiology D04)",
+      "Weight_Minutes": 8.7957,
+      "Std_Error": 1.1458,
+      "t_Statistic": 7.6764,
+      "p_Value": 1.84297022087776e-14
+    },
+    {
+      "Feature": "Triage_Level == High",
+      "Weight_Minutes": 10.7876,
+      "Std_Error": 1.0562,
+      "t_Statistic": 10.2133,
+      "p_Value": 0.0
+    },
+    {
+      "Feature": "Triage_Level == Medium",
+      "Weight_Minutes": 32.1457,
+      "Std_Error": 0.9814,
+      "t_Statistic": 32.755,
+      "p_Value": 0.0
+    },
+    {
+      "Feature": "Triage_Level == Low",
+      "Weight_Minutes": 54.99,
+      "Std_Error": 0.9936,
+      "t_Statistic": 55.3451,
+      "p_Value": 0.0
+    },
+    {
+      "Feature": "Department == Admissions",
+      "Weight_Minutes": 1.1014,
+      "Std_Error": 0.9402,
+      "t_Statistic": 1.1715,
+      "p_Value": 0.24142504393032604
+    },
+    {
+      "Feature": "Department == Emergency",
+      "Weight_Minutes": 4.1324,
+      "Std_Error": 0.9381,
+      "t_Statistic": 4.4048,
+      "p_Value": 1.0723921321842411e-05
+    },
+    {
+      "Feature": "Department == General Medicine",
+      "Weight_Minutes": 10.2998,
+      "Std_Error": 0.9522,
+      "t_Statistic": 10.8173,
+      "p_Value": 0.0
+    },
+    {
+      "Feature": "Department == Laboratory",
+      "Weight_Minutes": 15.4129,
+      "Std_Error": 0.9548,
+      "t_Statistic": 16.1428,
+      "p_Value": 0.0
+    },
+    {
+      "Feature": "Department == Neurology",
+      "Weight_Minutes": 11.4363,
+      "Std_Error": 0.9531,
+      "t_Statistic": 11.9992,
+      "p_Value": 0.0
+    },
+    {
+      "Feature": "Department == Orthopedics",
+      "Weight_Minutes": 6.0075,
+      "Std_Error": 0.9663,
+      "t_Statistic": 6.217,
+      "p_Value": 5.321674212410699e-10
+    },
+    {
+      "Feature": "Department == Outpatient",
+      "Weight_Minutes": 14.2153,
+      "Std_Error": 0.9665,
+      "t_Statistic": 14.7087,
+      "p_Value": 0.0
+    },
+    {
+      "Feature": "Department == Pediatrics",
+      "Weight_Minutes": 16.4801,
+      "Std_Error": 0.9555,
+      "t_Statistic": 17.2475,
+      "p_Value": 0.0
+    },
+    {
+      "Feature": "Department == Pharmacy",
+      "Weight_Minutes": 1.021,
+      "Std_Error": 0.9451,
+      "t_Statistic": 1.0803,
+      "p_Value": 0.28002936443013793
+    },
+    {
+      "Feature": "Department == Radiology",
+      "Weight_Minutes": 10.356,
+      "Std_Error": 0.9555,
+      "t_Statistic": 10.8384,
+      "p_Value": 0.0
+    },
+    {
+      "Feature": "Department == Surgery",
+      "Weight_Minutes": 4.877,
+      "Std_Error": 0.9486,
+      "t_Statistic": 5.141,
+      "p_Value": 2.7982718986407917e-07
+    },
+    {
+      "Feature": "Patient_Age (Standardized)",
+      "Weight_Minutes": -0.0139,
+      "Std_Error": 0.1942,
+      "t_Statistic": -0.0715,
+      "p_Value": 0.9429785885021664
+    },
+    {
+      "Feature": "Arrival_Hour (Standardized)",
+      "Weight_Minutes": -0.0884,
+      "Std_Error": 0.1943,
+      "t_Statistic": -0.4549,
+      "p_Value": 0.6491789272030444
+    }
+  ]
+}
