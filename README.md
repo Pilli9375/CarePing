@@ -2,7 +2,7 @@
 
 # ⚡ CarePing OS v3.0 QUANTUM
 
-**Spatial Hospital Digital Twin, Vectorized Queue Hazard Estimator & Omnichannel Anti-Walkout Escalation Platform**
+**Spatial Hospital Digital Twin, Vectorized Queue Hazard Estimator & Omnichannel Patient Retention Platform**
 
 *Datathon 2026 | Track 1: Healthcare Operations (`Health — The Forgotten Patient`)*  
 **Team AAdharsha Kutumbam** · Naga Adithya V (`23BCE9062`) & Harsha Vardhan Vurtha (`23BCE9129`)
@@ -14,13 +14,13 @@
 ![SciPy](https://img.shields.io/badge/SciPy-SVD--OLS-8CAAE6?logo=scipy&logoColor=white)
 ![NodeJS](https://img.shields.io/badge/Node.js-Express-339933?logo=node.js&logoColor=white)
 ![Canvas](https://img.shields.io/badge/Canvas-60FPS_Isometric-E34F26?logo=html5&logoColor=white)
-![WebAudio](https://img.shields.io/badge/Web_Audio-Neural_IVR-FF6F00)
+![WebAudio](https://img.shields.io/badge/Web_Audio-Neural_Voice_IVR-FF6F00)
 ![Offline](https://img.shields.io/badge/Zero_External_APIs-100%25_Offline-success)
 [![Repository](https://img.shields.io/badge/GitHub-CarePing-181717?logo=github)](https://github.com/Pilli9375/CarePing)
 
 <br>
 
-<img src="outputs/ui_product_preview.png" alt="CarePing OS v3.0 Quantum Product Console Preview" width="920">
+<img src="outputs/ui_product_preview.png" alt="CarePing OS v3.0 Quantum 3D Spatial Digital Twin & Command Center" width="940">
 
 </div>
 
@@ -28,14 +28,15 @@
 
 ## 🎯 Abstract
 
-In modern hospital emergency and outpatient networks, lower-acuity patients are repeatedly displaced by arriving critical cases until they feel abandoned and walk out without medical care (**Left Without Being Seen / LWBS**). Simultaneously, discharged patients remain trapped in hospital beds for nearly an hour waiting for billing paperwork, suffocating bed capacity for inbound patients.
+In busy emergency departments and outpatient networks, lower-acuity patients are systematically pushed down the queue whenever critical cases arrive. Left without updates, these patients experience queue starvation until they walk out without receiving care (**Left Without Being Seen / LWBS**)—stretching to **153 minutes** in Pediatrics and Laboratory. Concurrently, medically cleared patients remain in acute treatment beds for **52.23 minutes** waiting for billing paperwork, suffocating bed capacity for waiting-room patients.
 
-**CarePing OS v3.0 Quantum** solves queue starvation through a unified, 100% self-contained operational stack built from first principles:
-- **Forensic Data Quality Audit.** Audited all `15,012 records` across 4 relational datasets. Uncovered and sanitized **4 synthetic anomalies**: the `'None'` string missing-data trap (747 patients preserved), desynchronized test timestamps (99.96% out-of-window), ghost service minutes on walkout encounters (242 encounters), and adult routing in pediatrics (533 encounters).
-- **From-Scratch ML Hazard & Wait Estimator.** Vectorized SVD-OLS, $L_2$ Ridge, and Empirical Bayes Boosted Interaction regression built in pure NumPy/SciPy (zero black-box cloud dependencies). Achieves **$R^2 = 0.5236$** with a **32.07% to 44.0% MAE reduction** over baseline ($13.77\text{ min}$ vs. $20.27\text{ min}$) with **$0.032\ \mu\text{s}$ inference latency**.
-- **60 FPS 3D Isometric Hospital Digital Twin.** Real-time HTML5 Canvas spatial floor radar across all 12 departments (`D01`–`D12`) rendering animated patient particles, starvation thermal gradients, and priority shockwaves.
-- **Omnichannel Anti-Walkout Communications.** Two-way interactive WhatsApp Business bot (`English`, `తెలుగు`, `हिन्दी`), Web Audio neural voice call IVR with live 32-bar frequency visualizer and interactive DTMF keypad, and an automated 4-stage anti-walkout escalation waterfall.
-- **Bed Turnover & Virtual HomePass.** Autonomous Discharge Lounge Kanban reclaiming **3,482 bed-hours annually** by eliminating post-service boarding bottlenecks (52.23 min mean post-treatment wait), coupled with a remote pre-check-in portal synchronizing GPS commute time with queue wait.
+**CarePing OS v3.0 Quantum** delivers an end-to-end, full-stack hospital operational intelligence suite engineered from first principles:
+- **60 FPS 3D Spatial Hospital Floor Digital Twin:** Real-time HTML5 Canvas spatial floor radar modeling all 12 departments (`D01`–`D12`) with animated particle dynamics, thermal starvation gradients, and queue shockwave rings.
+- **From-Scratch Vectorized ML Engine:** 100% self-contained SVD-OLS, $L_2$ Tikhonov Ridge, Empirical Bayes Interaction boosting, and Newton-Raphson IRLS logistic hazard estimation in pure NumPy/SciPy (zero cloud APIs). Achieves **$R^2 = 0.5236$**, reduces MAE by **32.07% to 44.0%** over baseline, with **$0.032\ \mu\text{s}$ single-patient inference latency**.
+- **Omnichannel Anti-Walkout Retention Studio:** Interactive two-way multilingual WhatsApp Business bot (`English`, `తెలుగు`, `हिन्दी`), neural Web Audio voice call IVR simulator with live 32-bar frequency visualizer and DTMF keypad (`1`, `2`, `3`), and a 4-stage anti-walkout escalation waterfall.
+- **CarePing HomePass Virtual Waiting Room:** Remote pre-check-in portal synchronizing live GPS commute time with ML wait predictions, calculating a dynamic **"Leave Home In X Mins"** countdown and generating an Express Kiosk QR Boarding Pass.
+- **Clinical Breakthroughs:** Contactless **Silent-Crash Biometric Micro-Triage Radar** detecting physiological deterioration in waiting chairs, and an **Autonomous Bed-Turnover & Discharge Lounge Kanban** reclaiming **3,482 bed-hours annually**.
+- **Forensic Data Quality Audit:** Processed all **15,012 relational records**, uncovering and mitigating **4 synthetic dataset traps** (`'None'` string corruption, desynchronized test timestamps, walkout ghost service minutes, and pediatric adult routing anomalies).
 
 ---
 
@@ -77,25 +78,38 @@ In modern hospital emergency and outpatient networks, lower-acuity patients are 
 
 ---
 
-## 📸 Visual Analytics & Dashboard
+## 📸 CarePing OS v3.0 Quantum Screenshots
 
-| 60 FPS Isometric Digital Twin & Queue OS | Diagnostic Turnaround Time Paradox |
-|:---:|:---:|
-| <img src="outputs/ui_product_preview.png" alt="CarePing OS Quantum Interface" width="450"> | <img src="outputs/chart3_diagnostic_tat_paradox.png" alt="Diagnostic Turnaround Time Paradox" width="450"> |
-| *Spatial department radar, live patient tracker & nurse dispatch console.* | *Statistical proof that Urgent diagnostic orders lack clinical fast-tracking.* |
-
-| Triage & Department Wait Distribution | LWBS Walkouts & Post-Service Boarding |
-|:---:|:---:|
-| <img src="outputs/chart1_triage_dept_wait.png" alt="Triage Department Wait Breakdown" width="450"> | <img src="outputs/chart2_lwbs_and_los_breakdown.png" alt="LWBS and Length of Stay Breakdown" width="450"> |
-| *Low-triage patients wait 71.7m (4.33× critical) peaking at 153m in D03 & D07.* | *242 walkouts (3.03%) vs. 52.2m wasted post-service bed boarding.* |
-
+### 1. Spatial Digital Twin & Live Command Center
 <div align="center">
-
-### Machine Learning Benchmark & Priority Aging Dynamics
-<img src="outputs/chart5_ml_benchmark_and_priority_aging.png" alt="CarePing ML Model Benchmark and Priority Aging Curves" width="900">
-*Left: 5-Fold Cross-Validation across models. Right: Non-linear Priority Aging curve preventing starvation.*
-
+<img src="outputs/ui_product_preview.png" alt="60 FPS 3D Spatial Digital Twin & Command Center" width="920">
+<br>
+<em>Real-time 60 FPS 3D isometric floor radar showing all 12 hospital departments, active patient flow particle streams, starvation thermal gradients, and hospital capacity heads-up display.</em>
 </div>
+
+<br>
+
+### 2. Omnichannel Anti-Walkout Communications Studio & Virtual HomePass
+| Omnichannel WhatsApp & Neural Voice IVR Studio | CarePing HomePass Virtual Waiting Room |
+|:---:|:---:|
+| <img src="outputs/ui_v3_omnichannel.png" alt="Omnichannel WhatsApp and Voice IVR Studio" width="460"> | <img src="outputs/ui_v3_homepass.png" alt="CarePing HomePass Virtual Waiting Room" width="460"> |
+| *Two-way WhatsApp bot (EN/TE/HI), Web Audio neural voice IVR with 32-bar visualizer, DTMF keypad & 4-stage escalation waterfall.* | *Remote pre-check-in portal, live GPS commute synchronization, "Leave Home In" countdown & Express Kiosk QR pass.* |
+
+<br>
+
+### 3. Clinical Innovations & Diagnostic Paradox
+| Silent Crash Micro-Triage & Discharge Lounge Kanban | Diagnostic Turnaround Time Paradox |
+|:---:|:---:|
+| <img src="outputs/ui_v3_innovations.png" alt="Silent Crash Radar and Bed Kanban" width="460"> | <img src="outputs/chart3_diagnostic_tat_paradox.png" alt="Diagnostic Turnaround Time Paradox" width="460"> |
+| *Contactless biometric vital monitoring in waiting seats & autonomous bed turnover reclaiming 3,482 bed-hours/year.* | *Statistical proof that Urgent diagnostic orders lack clinical fast-tracking over routine tests ($p = 0.8805$).* |
+
+<br>
+
+### 4. Queue Starvation & Machine Learning Benchmarks
+| Triage & Department Wait Distribution | ML Benchmark & Non-Linear Priority Aging |
+|:---:|:---:|
+| <img src="outputs/chart1_triage_dept_wait.png" alt="Triage Department Wait Breakdown" width="460"> | <img src="outputs/chart5_ml_benchmark_and_priority_aging.png" alt="ML Benchmark and Priority Aging" width="460"> |
+| *Low-triage patients wait 71.7m (4.33× critical) peaking at 153m in D03 & D07.* | *5-Fold Cross-Validation across models and non-linear dynamic priority aging curves $S(t)$.* |
 
 ---
 
@@ -163,18 +177,23 @@ $$\text{Total Operational Variance Explained: } \eta^2_{\text{operational}} = 52
 
 ---
 
-## 💡 Core Clinical & Technical Innovations
+## 💡 Core Clinical & Technical Innovations in V3 Quantum
 
 1. **60 FPS Isometric Spatial Floor Twin (`<canvas id="isoHospitalCanvas">`):**
-   Renders real-time spatial physics, patient queue density, and department starvation heatmaps directly in the browser with zero external UI libraries.
-2. **Two-Way Multilingual WhatsApp Queue Concierge:**
-   Simulates automated messaging in English, Telugu, and Hindi. Allows patients to confirm arrival (`[1]`), request a non-punitive +15-minute traffic delay swap (`[2]`), or escalate to a charge nurse (`[3]`).
-3. **Web Audio AI Neural Voice IVR:**
-   Generates real-time synthetic telephony audio using the browser's Web Audio oscillator pipeline with an animated 32-bar frequency visualizer and functional DTMF keypad.
-4. **CarePing HomePass Virtual Waiting Room:**
-   Synchronizes live Google/Map commute ETA with real-time ML wait predictions, enabling patients to wait safely at home until their exact call window.
-5. **AI Silent-Crash Biometric Radar:**
-   Detects subtle waiting room physiological deterioration (simulated pulse oximetry and heart rate drops) and issues an immediate override escalation.
+   Real-time 3D isometric floor radar modeling all 12 hospital departments (`D01`–`D12`) with animated particle flow dynamics, thermal starvation gradients, and queue shockwave rings rendered entirely via HTML5 Canvas.
+2. **Automated Omnichannel Retention Studio (WhatsApp + SMS + Voice IVR):**
+   - **Two-Way WhatsApp Business Bot:** Multilingual support (`English`, `తెలుగు`, `हिन्दी`). Patients confirm attendance (`[1]`), request a non-punitive +15m traffic delay grace hold (`[2]`), or escalate to nursing (`[3]`).
+   - **Automated AI Voice Call IVR:** Synthesizes voice check-in calls via Web Audio API with a live 32-bar frequency visualizer and interactive DTMF keypad.
+   - **4-Stage Anti-Walkout Escalation Waterfall:** Automatic escalation triggered as patient wait reaches 30m, 45m, 60m, and hazard $>70\%$.
+3. **CarePing HomePass — Virtual Waiting Room Portal:**
+   Enables patients to join the hospital queue from home, dynamically computing commute time vs. ML predicted wait:
+   $$T_{\text{leave\_home}} = \max\left(0,\, \hat{y}_{\text{ML\_Wait}} - T_{\text{GPS\_Commute}} - 10\text{m buffer}\right)$$
+   Includes an Express Kiosk QR Boarding Pass for zero-paperwork check-in upon hospital arrival.
+4. **AI Silent-Crash Biometric Micro-Triage Radar:**
+   Detects silent clinical deterioration in waiting-room patients through simulated contactless rPPG / pulse oximetry monitoring. Immediately triggers an emergency priority boost when vitals breach thresholds:
+   $$S_{\text{total}}(t) = W_{\text{acuity}} + \alpha \cdot \max(0,\, t - \text{SLA})^{1.38} + \gamma \cdot \mathbb{I}(\text{SpO}_2 < 93\% \lor \text{HR} > 120)$$
+5. **Autonomous Post-Service Bed-Turnover & Discharge Lounge Kanban:**
+   Directly targets the 52.23-minute post-treatment bottleneck by routing medically cleared patients to a comfortable Discharge Lounge, freeing acute care beds immediately and reclaiming **3,482 bed-hours annually**.
 
 ---
 
@@ -183,7 +202,7 @@ $$\text{Total Operational Variance Explained: } \eta^2_{\text{operational}} = 52
 ### Option 1: 1-Click Windows Launcher (Fastest)
 Double-click **`start_careping.bat`** in the repository root. This script automatically:
 1. Runs the full NumPy/SciPy training pipeline in $<250\text{ ms}$.
-2. Launches the local server and launches the CarePing OS console in your browser.
+2. Launches the local server and opens the CarePing OS console in your browser.
 
 ### Option 2: Python Engine & CLI
 ```bash
@@ -216,7 +235,7 @@ Simply open **`index.html`** or **`forgotten_patient_dashboard.html`** directly 
 
 ```text
 CarePing/
-├── index.html                           # CarePing OS v3.0 Quantum Interactive Web Suite (7 Modules)
+├── index.html                           # CarePing OS v3.0 Quantum Interactive Web Suite (10 Modules)
 ├── forgotten_patient_dashboard.html     # Standalone Offline Emergency Fallback Suite
 ├── start_careping.bat                   # 1-Click Automated Windows Pipeline & Web Launcher
 ├── app.py                               # Universal Multi-Mode Python Server (CLI + HTTP)
@@ -239,8 +258,11 @@ CarePing/
 │   ├── encounters.csv                   # 8,000 Emergency & Inpatient Hospital Visits
 │   ├── diagnostic_tests.csv             # 5,000 Diagnostic Laboratory & Imaging Records
 │   └── README.txt                       # Official Dataset Challenge Brief
-├── outputs/                             # Forensic Visuals, Scorecards & Model Weights
-│   ├── ui_product_preview.png           # 4K Dark-Mode CarePing OS v3.0 Product Screenshot
+├── outputs/                             # Forensic Visuals, Scorecards & High-Res Screenshots
+│   ├── ui_product_preview.png           # 4K CarePing OS v3.0 Quantum 3D Spatial Digital Twin
+│   ├── ui_v3_omnichannel.png            # V3 Omnichannel WhatsApp Bot & AI Voice IVR Studio
+│   ├── ui_v3_homepass.png               # V3 CarePing HomePass Virtual Waiting Room & Commute Sync
+│   ├── ui_v3_innovations.png            # V3 Silent-Crash Biometric Radar & Bed Kanban
 │   ├── chart1_triage_dept_wait.png      # Triage Acuity vs. Department Starvation Visual
 │   ├── chart2_lwbs_and_los_breakdown.png# LWBS Walkout Hazard & Length-of-Stay Analysis
 │   ├── chart3_diagnostic_tat_paradox.png# Empirical Proof of Urgent Lab Ordering Inefficiencies

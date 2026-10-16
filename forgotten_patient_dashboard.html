@@ -3302,6 +3302,10 @@
       updateHomePassPreview();
       renderBiometricSeats();
       renderBedKanban();
+      const hash = window.location.hash.replace('#', '');
+      if (hash && ['overview', 'omnichannel', 'homepass', 'innovations', 'playground', 'queue', 'benchmark', 'cohorts', 'diagnostics', 'simulator'].includes(hash)) {
+        switchTab(hash);
+      }
     });
   </script>
 </body>
