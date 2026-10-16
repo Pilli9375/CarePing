@@ -34,7 +34,6 @@ CarePing/
 ├── forgotten_patient_dashboard.html     # Standalone Offline Dashboard Copy
 ├── train_and_evaluate_model.py          # ML Model Training (80/20 Split), ANOVA & Weight Export Script
 ├── forgotten_patient_analysis.py        # Forensic Data Quality Audit, EDA & High-Res Chart Generator
-├── FACULTY_VIVA_QA_GUIDE.md             # Step-by-Step Viva & Judge Q&A Defense Guide
 ├── requirements.txt                     # Python Dependencies
 ├── data/                                # Official Datathon Relational Dataset (15,012 records)
 │   ├── patients.csv                     # 2,000 registered patients
