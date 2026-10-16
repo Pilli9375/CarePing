@@ -23,8 +23,8 @@ plt.rcParams['font.sans-serif'] = 'DejaVu Sans'
 plt.rcParams['axes.edgecolor'] = '#CBD5E1'
 plt.rcParams['axes.linewidth'] = 0.8
 
-DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data")
-INTERMEDIATE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "outputs")
+DATA_DIR = "/working_dir/c_99ff96a9eb94542d/user_uploaded_files/ttl=63d/user_uploaded"
+INTERMEDIATE_DIR = "/working_dir/c_99ff96a9eb94542d/artifacts/file_generation/ttl=63d/intermediate"
 os.makedirs(INTERMEDIATE_DIR, exist_ok=True)
 
 

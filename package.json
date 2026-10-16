@@ -1,0 +1,16 @@
+{
+  "name": "careping-os-v3-quantum",
+  "version": "3.0.0",
+  "description": "CarePing OS v3.0 Quantum — Full-Stack React + Node.js + Tailwind + From-Scratch ML Queue & Omnichannel Patient Retention Platform",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "train": "python train_and_evaluate_model.py"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "author": "Team AAdharsha Kutumbam — Naga Adithya V (23BCE9062), Harsha Vardhan Vurtha (23BCE9129)",
+  "license": "MIT"
+}
